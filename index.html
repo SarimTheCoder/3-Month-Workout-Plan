@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>3-Month Workout Plan</h1>
+        <h2>Track your progress and stay on top of your fitness journey!</h2>
+    </header>
+
+    <!-- Buttons for Month Selection -->
+    <section class="month-buttons">
+        <button onclick="changeMonth(1)">Month 1</button>
+        <button onclick="changeMonth(2)">Month 2</button>
+        <button onclick="changeMonth(3)">Month 3</button>
+    </section>
+
+    <!-- Weekly Workout Schedule Section -->
+    <section id="weekly-workout" class="workout-schedule">
+        <h2>Weekly Workout Schedule - Month 1</h2>
+        <table id="month1">
+            <!-- Month 1 Schedule -->
+            <tr>
+                <th>Day</th>
+                <th>Workout</th>
+                <th>Completed?</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Push-ups (4x15), Squats (4x20)</td>
+                <td><input type="checkbox" id="monday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Run (3km), Punching Bag (5x2min)</td>
+                <td><input type="checkbox" id="tuesday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Push-ups (4x20), Dumbbell Combo (3x10)</td>
+                <td><input type="checkbox" id="wednesday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Sprint Intervals (6x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="thursday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Explosive Push-ups (3x10), Jump Squats (3x15)</td>
+                <td><input type="checkbox" id="friday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Sprint Intervals (6x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="saturday-completed1"></td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Light walk (15–30 min), Stretching (10–15 min), Mobility Drills (10 min)</td>
+                <td><input type="checkbox" id="sunday-completed1"></td>
+            </tr>
+        </table>
+
+        <table id="month2" style="display: none;">
+            <!-- Month 2 Schedule -->
+            <tr>
+                <th>Day</th>
+                <th>Workout</th>
+                <th>Completed?</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Push-ups (4x20), Squats (4x25)</td>
+                <td><input type="checkbox" id="monday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Run (3.5km), Punching Bag (6x2min)</td>
+                <td><input type="checkbox" id="tuesday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Push-ups (4x25), Dumbbell Combo (4x12)</td>
+                <td><input type="checkbox" id="wednesday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Sprint Intervals (7x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="thursday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Explosive Push-ups (4x12), Jump Squats (4x15)</td>
+                <td><input type="checkbox" id="friday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Sprint Intervals (7x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="saturday-completed2"></td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Light walk (20–40 min), Stretching (15–20 min), Mobility Drills (15 min)</td>
+                <td><input type="checkbox" id="sunday-completed2"></td>
+            </tr>
+        </table>
+
+        <table id="month3" style="display: none;">
+            <!-- Month 3 Schedule -->
+            <tr>
+                <th>Day</th>
+                <th>Workout</th>
+                <th>Completed?</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Push-ups (5x15), Squats (5x20)</td>
+                <td><input type="checkbox" id="monday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Run (4km), Punching Bag (7x2min)</td>
+                <td><input type="checkbox" id="tuesday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Push-ups (5x20), Dumbbell Combo (5x12)</td>
+                <td><input type="checkbox" id="wednesday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Sprint Intervals (8x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="thursday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Explosive Push-ups (5x12), Jump Squats (5x15)</td>
+                <td><input type="checkbox" id="friday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Sprint Intervals (8x30s sprint + 30s walk)</td>
+                <td><input type="checkbox" id="saturday-completed3"></td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Light walk (30 min), Stretching (20 min), Mobility Drills (20 min)</td>
+                <td><input type="checkbox" id="sunday-completed3"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Nutrition Guide Section -->
+    <section class="nutrition-guide">
+        <h2>Simple Daily Nutrition Guide</h2>
+        <table>
+            <tr>
+                <th>Meal Time</th>
+                <th>Suggested Foods</th>
+            </tr>
+            <tr>
+                <td>Morning</td>
+                <td>2 boiled eggs + banana + glass of milk</td>
+            </tr>
+            <tr>
+                <td>Post-Workout</td>
+                <td>Protein shake (milk + banana + oats or peanut butter)</td>
+            </tr>
+            <tr>
+                <td>Lunch</td>
+                <td>Roti + chicken/daal + sabzi + yogurt</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td>Chana / peanuts / apple</td>
+            </tr>
+            <tr>
+                <td>Dinner</td>
+                <td>Roti or rice + meat/daal + veggies</td>
+            </tr>
+            <tr>
+                <td>Before Sleep</td>
+                <td>Glass of milk (optional) + 2 dates if needed for energy</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>Workout Tracker © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
