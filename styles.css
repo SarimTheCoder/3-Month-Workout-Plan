@@ -1,0 +1,287 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.4em;
+    font-weight: lighter;
+}
+
+/* Month Buttons */
+.month-buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Weekly Workout Schedule Section */
+.workout-schedule {
+    margin: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #ddd;
+    font-weight: bold;
+}
+
+table th {
+    background-color: #555;
+}
+
+table tr:nth-child(even) {
+    background-color: #555;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+/* Nutrition Guide Section */
+.nutrition-guide {
+    margin: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition-guide table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition-guide table th, .nutrition-guide table td {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.nutrition-guide table th {
+    background-color: #555;
+}
+
+.nutrition-guide table tr:nth-child(even) {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 1080px */
+@media screen and (max-width: 1080px) {
+    body {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2);
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .month-buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .month-buttons button {
+        font-size: 1em;
+    }
+
+    table th, table td {
+        padding: 12px;
+    }
+
+    .nutrition-guide table th, .nutrition-guide table td {
+        padding: 12px;
+    }
+}
+
+/* For screens smaller than 480px (Phones) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    .month-buttons button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
+
+/* For screens smaller than 360px */
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        margin-top: 5px;
+    }
+
+    .month-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.1);
+    }
+}
+
+/* For very small screens (320px) */
+@media screen and (max-width: 320px) {
+    body {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+
+    .month-buttons button {
+        padding: 8px 12px;
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.1);
+    }
+}
